@@ -12,6 +12,6 @@ License: GPL2
 //Add Profile Edit
 require_once(ABSPATH . '/wp-admin/includes/plugin.php');
 //Add Chapter Leadershiplist
-require_once(ABSPATH . '/wp-content/plugins/seds-chapterlist/leaderlist.php');
+require_once(ABSPATH . '/wp-content/plugins/seds-code/leaderlist.php');
 //Add [seds-chapters]
-require_once(ABSPATH . '/wp-content/plugins/seds-chapterlist/chapterslug.php');
+require_once(ABSPATH . '/wp-content/plugins/seds-code/chapterslug.php');
