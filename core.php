@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: SEDS Chapter List
+Plugin Name: SEDS Code Addons
 Plugin URI: http://www.seds.org
-Description: A plugin to display SEDS Chapters using a shortcode
-Version: 0.01
+Description: A plugin to display SEDS Chapters using a shortcode and other misc setup files
+Version: 0.02
 Author: Dan Pastuf
 Author URI: http://www.danpastuf.com
 License: GPL2
