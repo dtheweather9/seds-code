@@ -1,0 +1,276 @@
+@charset "utf-8";
+/* CSS Document */
+
+#header {
+width: 100%;
+background-position-x: 0px;
+}
+
+#bppadder {
+width: 75%;
+}
+
+.paddersidebar {
+padding: 0px 10px;
+}
+
+div#container, body.activity-permalink div#container {
+padding-right: 0px;
+padding-left: 0px;
+}
+
+div.item-list-tabs ul li:first-child {
+margin-left: 0px;
+}
+
+div.item-list-tabs ul li {
+float: left;
+margin: 0px 0px;
+list-style-type: none;
+}
+
+#bp-civiprof-form {
+width:400px;
+background-color: #f5f5f5;
+padding: 10px;
+padding-left: 20px;
+-webkit-border-radius: 30px;
+margin-left: 250px;
+margin-top: -230px;
+}
+
+legend {
+font-size: 16px;
+margin-bottom: 15px;
+font-family: Arial, sans-serif;
+font-weight: bold;
+}
+
+div.control-group {
+padding-left: 20px;
+}
+
+#bpcivi-editphotoform {
+width:400px;
+background-color: #f5f5f5;
+padding: 10px;
+padding-left: 20px;
+-webkit-border-radius: 30px;
+}
+
+body {
+color: rgb(210, 210, 210);
+}
+
+div#leftsidebar h3.widgettitle, div#sidebar h3.widgettitle, div.widgetarea h3.widgettitle, div.span3 h3.widgettitle {
+color: rgb(211, 211, 211);
+}
+
+#bpcivi_preform {
+padding-left: 40px;
+}
+
+#bpcivi_postform {
+padding-left: 40px;
+}
+
+#bpcivi_bpeditdiv {
+float: left;
+max-width: 300px;
+}
+
+#bpcivieditform {
+float: right;
+max-width: 450px;
+background-color: gray;
+padding: 10px;
+border-radius: 20px;
+}
+
+.page_item.page-item-9528 {
+visibility: hidden;
+width: 0;
+}
+
+form.standard-form textarea, form.standard-form input[type=text], form.standard-form select, form.standard-form input[type=password], .dir-search input[type=text], form.standard-form input[type=url] {
+border: 1px inset #ccc;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+padding: 6px;
+font: inherit;
+font-size: 14px;
+color: #888;
+}
+
+form.standard-form input[type=url] {
+width: 75%;
+}
+
+#seds-leaderyear {
+font-size: large;
+padding-left: 40px;
+background-color: rgba(128, 128, 128, 0.34);
+}
+
+#seds-leadertable {
+background: rgba(128, 128, 128, 0.5);
+-webkit-border-radius: 30px;
+margin-top: 20px;
+margin-left: 10px;
+border-bottom-color: white;
+}
+
+#seds-leaderdisplayname {
+padding-left: 20px;
+}
+
+#seds-leadertabletitlerowlefttext {
+padding-left: 30px;
+}
+
+#seds-leadertabletitlerow {
+font-size: large;
+}
+
+#header .row-fluid .span4, #content .row-fluid .span4, #footer .row-fluid .span4 {
+/* Make Bottom row wider for affiliates*/
+margin-left: 10px;
+width: 970px;
+float: left;
+}
+
+#header .row-fluid .span4, #content .row-fluid .span4, #footer ul li {
+/* Make Bottom list horizontal */
+background: none repeat scroll 0 0 transparent;
+border-bottom: medium none;
+min-height: 20px;
+margin-bottom: 5px;
+list-style: none outside none;
+padding: 5px 10px 0;
+float: left;
+}
+
+#sedsjobmanfield {
+width: 600px;
+float: left;
+clear: left;
+}
+
+#cat-NASA {
+/* Hide NASA Apply Now Links */
+display: none;
+}
+
+#cat- {
+/* Hide No Cat Apply Now Links */
+display: none;
+}
+
+#sedsjoblist-search {
+/* Top of Job List shortcode */
+background-color: rgb(75, 75, 75);
+padding: 10px;
+-webkit-border-radius: 20px;
+min-height: 300px;
+}
+
+#sedsjoblist-submit {
+clear: both;
+padding-top: 10px;
+}
+
+#sedsjoblist-row {
+display: table-row;
+}
+
+#sedsjoblist-container {
+display: table;
+margin-top: 30px;
+}
+
+#sedsjoblist-left {
+display: table-cell;
+border: none;
+}
+
+#sedsjoblist-locationhead {
+border: none;
+}
+
+#sedsjoblist-right {
+display: table-cell;
+border: none;
+}
+
+#sedsjoblist-middle {
+display: table-cell;
+}
+
+#sedsjoblist-majorsbox {
+float: left;
+}
+
+#seds-majorsbox {
+height: 200px;
+min-width: 250px;
+}
+
+#seds-categorybox {
+min-height: 100px;
+min-width: 250px;
+}
+
+#sedsjoblist-lefthead {
+background-color: gray;
+border: none;
+min-width: 115px;
+}
+
+#sedsjoblist-spacerrow {
+width: 100%;
+height: 10px;
+}
+
+#sedsjoblist-upperrow {
+background-color: rgb(60, 60, 60);
+}
+
+#sedsjoblist-lowerrow {
+background-color: rgb(60, 60, 60);
+}
+
+#sedsjoblist-typebox {
+float: right;
+}
+
+#sedsjoblist-yearsbox {
+width: 200px;
+float: left;
+margin-left: auto;
+margin-right: auto;
+}
+
+#sedsjoblist-keywords {
+margin-left: auto;
+margin-right: auto;
+}
+
+widget li.current-cat, div.widget ul li.current_page_item {
+background: transparent;
+margin-left: 2px;
+margin-top: 2px;
+padding: 2px 8px 0 8px;
+width: 100%;
+}
+
+#seds-yearsbox {
+min-height: 175px;
+}
+
+#sedsjoblist-submitbox {
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+}
