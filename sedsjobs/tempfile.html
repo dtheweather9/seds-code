@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>
+OSSI
+</title>
+<link type="text/css" href="/ossi/common/js/jquery/development-bundle/themes/base/jquery.ui.all.css" rel="stylesheet">
+<link type="text/css" href="/ossi/common/css/jquery-styles.css" rel="stylesheet">
+<link type="text/css" href="/ossi/common/css/ossi_main.css" rel="stylesheet">
+<link type="text/css" href="/ossi/common/css/public_content.css" rel="stylesheet">
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" media="screen" href="/ossi/common/css/ossi_iefixes.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/ossi/common/css/public_content_ie.css" />
+<![endif]-->
+<script type="text/javascript" src="/ossi/common/js/jquery/js/jquery-1.5.1.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/development-bundle/external/jquery.bgiframe-2.1.1.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/development-bundle/ui/minified/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/development-bundle/ui/minified/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/development-bundle/ui/minified/jquery.ui.mouse.min.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/development-bundle/ui/minified/jquery.ui.position.min.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/development-bundle/ui/minified/jquery.ui.resizable.min.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/development-bundle/ui/minified/jquery.ui.dialog.min.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/development-bundle/ui/minified/jquery.ui.autocomplete.min.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/development-bundle/ui/minified/jquery.ui.button.min.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/development-bundle/ui/minified/jquery.ui.datepicker.min.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/development-bundle/ui/minified/jquery.ui.sortable.min.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/development-bundle/ui/minified/jquery.ui.tabs.min.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/js/jquery.curvycorners.source.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/js/jquery.NobleCount.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/js/jquery.NobleCount.min.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/js/jquery.wordcount.js"></script>
+<script type="text/javascript" src="/ossi/common/js/jquery/js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="/ossi/common/js/Solar.js"></script>
+<script type="text/javascript" src="/ossi/common/js/json2.js"></script>
+<script type="text/javascript">
+// unblock when ajax activity stops
+$(document).ajaxStop($.unblockUI);
+$(document).ready(function() {
+$(':button, a').click(function() {
+//$.blockUI();
+});
+$('a[target="_blank"]').click(function() {
+$.unblockUI();
+});
+$(document).ready(function() {
+$('#moveRButton').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#moveLButton').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#reset').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#addFieldButton').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#rankUpButton').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#rankDownButton').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#mentorSearchButton').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#mentorSearchButton2').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#getHelp').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#instSearchButton').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('.instSearchButton').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#reassignButton').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#postOppConfirmButton').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#moveStudents').click(function() {
+$.unblockUI();
+});
+});
+});
+$(document).ready(function() {
+$('table#onboardingInfo a').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('table#onboardingInfo button').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('table#DemographicsTable button').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('.skiplink a').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('a[href*="#"]').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#faqBack1,#faqBack2').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('#onboardingPopup').click(function() {
+$.unblockUI();
+});
+});
+$(document).ready(function() {
+$('.unblockLink').click(function() {
+$.unblockUI();
+});
+});
+</script>
+<meta name="keywords" content="
+Site Keywords" />
+<meta name="description" content="
+Site Description" />
+<meta name="orgcode" content="
+740" />
+<meta name="rno" content="
+mabel.j.matthews" />
+<meta name="content-owner" content="
+mabel.j.matthews" />
+<meta name="webmaster" content="
+neacc" />
+<link rel="shortcut icon" href="/ossi/web/images/icons/solar.ico" />
+<!-- Railo-Ajax-Core --> <script type="text/javascript">
+				var _cf_ajaxscriptsrc = '/ossi/mapping-tag/railo/core/ajax/JSLoader.cfc?method=get&lib=';
+				var _cf_ajaxcsssrc = '/ossi/mapping-tag/railo/core/ajax/css/';
+				var _cf_loadingtexthtml = '<div style="text-align: center;"><img src="/ossi/mapping-tag/railo/core/ajax/loader/loading.gif.cfm"/></div>';				
+				var _cf_params = {};
+				</script>
+				<script type="text/javascript" src="/ossi/mapping-tag/railo/core/ajax/JSLoader.cfc?method=get&lib=RailoAjax"></script><!-- _import_CFAJAXPROXY --> <script type="text/javascript">
+			Railo.Ajax.importTag('CFAJAXPROXY');
+			
+			</script></head>
+<body >
+<div class="content_body">
+<div class="top">
+<!-- Skip navigation link -->
+<div class="skiplink"><a href="#maincontent">Follow this link to skip to the main content</a></div>
+<div id="top_header" class="top_header">
+<div class="header">
+<span class="hide">OSSI-One Stop Shopping Initiative</span>
+<span id="topNavLinks">&nbsp;
+<a href="/ossi/web/students/login/">&nbsp;<span
+class="ui-icon ui-icon-unlocked" style="display:inline">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<strong>Student Login</strong>&nbsp;</a>&nbsp;|
+<a href="/ossi/web/faq/index.cfm?subAction=VIEW">&nbsp;<span
+class="ui-icon ui-icon-document" style="display:inline">&nbsp;&nbsp;&nbsp;</span>
+<strong>FAQ</strong>&nbsp;</a> &nbsp;
+| <a href="/ossi/web/home/index.cfm">&nbsp;<span
+class="ui-icon ui-icon-key" style="
+display:inline">&nbsp;&nbsp;&nbsp;</span>
+<strong>OSSI:NASA Users Login</strong>&nbsp;</a> &nbsp;
+| <a href="/ossi/../oic/" target="_blank"><span
+class="ui-icon ui-icon-help" style="display:inline">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<strong>
+Need Help? Click Here</strong>&nbsp;</a>&nbsp;
+|
+<form name="gs" method="GET" id="gsearchform" action="/ossi/web/public/search/">
+<span>
+<label for="q"
+>
+<span class="inlineImg">
+<img height="1" border="0" width="1" alt="Search OSSI" title="Search OSSI" src="/ossi/web/images/icons/spacer.gif" />
+</span>
+</label>
+<input 
+type="text" 
+name="q" 
+value="search OSSI" 
+id="q" 
+onFocus="document.gs.q.value='';"
+maxlength="256"
+size="20"
+/>
+</span>
+<input 
+type="image" 
+src="/ossi/web/images/icons/search_button3.png" 
+alt="Click here to run search" 
+name="gSearchBtn" 
+id="gSearchBtn" 
+checked="checked"
+/>
+<input 
+type="hidden" 
+name="solarAction" 
+value="search" 
+id="solarAction" 
+/>
+</form>
+&nbsp;
+</span>
+</div>
+</div>
+</div>
+<div id="content_notab">
+<fieldset><legend>Application Error</legend>
+<form name="email_to_support" method="post" action="/ossi/web/error/index.cfm">
+<input 
+type="hidden" 
+name="errorLogId" 
+value="51071" 
+id="errorLogId" 
+/>
+<p>
+There has been an error in the processing of the requested page.
+We have logged the the error and your user information that will help us identify and correct the problem.
+The Error Reference Number is 
+<a href='/ossi/web/error/index.cfm?solarAction=view&id=51071'><b>51071</b></a>.
+</p>
+<p>
+<label for="userComments"
+>
+Please enter a description of your actions immediately prior to this error occuring:
+</label>
+<br />
+<textarea 
+						
+							cols="80" 
+						 
+						
+							rows="4" 
+						 
+						
+							name="userComments" 
+						 
+						
+							id="userComments" 
+						 
+						 
+						 
+						 
+						
+						
+						
+
+
+
+
+
+
+
+		
+			
+			
+			
+				
+				
+				 
+			
+		
+		
+	
+						
+						
+                        
+						
+						></textarea>
+<br />
+Click the button below to email this information to OSSI Support.
+<br />
+<input type="hidden" name="hiddensolarAction597A4F74-EE34-4568-9877AF7A53F7CE85" id="hiddensolarAction597A4F74-EE34-4568-9877AF7A53F7CE85" value="save">
+<script type="text/javascript">
+function setupButtonSolarAction597A4F74EE3445689877AF7A53F7CE85() {
+// rename any "solarAction" buttons, since IE will use all, even those that arn't clicked
+var solarActionButtons = document.getElementsByName('solarAction');
+for (var i=0;i<solarActionButtons.length;i++)
+{
+solarActionButtons[i].name = 'solarAction597A4F74-EE34-4568-9877AF7A53F7CE85' + i;
+solarActionButtons[i].id = 'solarAction597A4F74-EE34-4568-9877AF7A53F7CE85' + i;
+}
+// set up the hidden input name
+var solarActionElement = document.getElementById('hiddensolarAction597A4F74-EE34-4568-9877AF7A53F7CE85');
+solarActionElement.name = 'solarAction';
+}
+function submitButtonAction597A4F74EE3445689877AF7A53F7CE85() {
+var solarButtonElement = document.getElementById('hiddensolarAction597A4F74-EE34-4568-9877AF7A53F7CE85');
+solarButtonElement.form.submit();
+}
+</script>
+<span id="buttonspanAB12011D8022479CB4DCB00DC856ABEE" >
+<button type="button" name="solarActionIEMod597A4F74-EE34-4568-9877AF7A53F7CE85"
+value="save" id="solarAction597A4F74-EE34-4568-9877AF7A53F7CE85"
+class="positive" onclick="setupButtonSolarAction597A4F74EE3445689877AF7A53F7CE85();;submitButtonAction597A4F74EE3445689877AF7A53F7CE85();"
+>
+<img name="" id="" class="" alt="" src="/ossi/web/images/icons/check_icon.png">
+Submit Information
+</button></span>
+<script type="text/javascript">
+$('#buttonspanAB12011D8022479CB4DCB00DC856ABEE').removeAttr("style");
+</script>
+<noscript >
+<label for="solarAction597A4F74-EE34-4568-9877AF7A53F7CE85">Submit Information: </label>
+<input type="button"
+name="solarActionIEMod597A4F74-EE34-4568-9877AF7A53F7CE85"
+value="save"
+id="solarAction597A4F74-EE34-4568-9877AF7A53F7CE85"
+class="positive"
+onclick="setupButtonSolarAction597A4F74EE3445689877AF7A53F7CE85();;submitButtonAction597A4F74EE3445689877AF7A53F7CE85();"
+/>
+</noscript>
+&nbsp; &nbsp;
+<span id="buttonspan523C118927014023B2C2096C1318751A" >
+<button type="button" name="solarAction"
+id="solarAction23885054-5621-4261-8A3C98BD3B7C02AF"
+onclick="history.back();"
+>
+Go Back
+</button></span>
+<script type="text/javascript">
+$('#buttonspan523C118927014023B2C2096C1318751A').removeAttr("style");
+</script>
+<noscript >
+<label for="solarAction23885054-5621-4261-8A3C98BD3B7C02AF">Go Back: </label>
+<input type="button"
+name="solarAction"
+id="solarAction23885054-5621-4261-8A3C98BD3B7C02AF"
+onclick="history.back();"
+/>
+</noscript>
+</p>
+</form>
+</fieldset>
+</div><!-- close div -->
+</div><!-- close content border div -->
+<div id="footer" style="font-size:11px">
+<a class="nasa_logo_footer" href="http://www.nasa.gov">
+<span class="hide">NASA - National Aeronautics and Space Administration</span>
+</a>
+<ul>
+<li>Help Desk Contact Information</li>
+<li><a href="mailto:MSFC-DL-HelpdeskMSFC@mail.nasa.gov">MSFC-DL-HelpdeskMSFC@mail.nasa.gov</a></li>
+<li>Phone: 1-866-419-6297</li>
+<li>Hours of Operations: 24/7</li>
+</ul>
+</div>
+</div>
+<!--<div class="background_layer">&nbsp;</div>-->
+<div id="helpBoxjq"></div>
+<div id="actionBoxjq"></div>
+<div id="solarTitleIconHidden" style="display:none;visibility:hidden">
+<img class="inlineImg" src="/ossi/web/images/SOLAR_Logo_mini2.gif" height="40" width="40" alt="OSSI" title="OSSI">&nbsp;
+</div>
+<!--Dialog box contents-->
+<script type="text/javascript">
+document.title = 'OSSI - Search Opportunities';
+</script>
+<script type='text/javascript' src='https://mobile.neacc.nasa.gov/pulse/track.js'></script>
+<script type='text/javascript'>try { Pulse.track('OSSI')}catch(e){}</script>
+</body>
+</html>

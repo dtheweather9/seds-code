@@ -4,21 +4,16 @@ function seds_jobsearch( $atts ){
 		global $wpdb;
 	
 	//Get Majors from NASA List	
-		$nasaoption = get_option( "seds_nasamajorlists" );
-		$nasayears = get_option( "seds_nasayearlists" );
+		$nasaoption = get_option( "ossi-majors" );
+		$nasayears = get_option( "ossi-level" );
+		$nasayearsoption = get_option( "ossi-level-options" );
 	//Get Companies
 		$sedsjobs_taxonomies = get_terms('jobman_category');
 		for ($j=0;$j<count($sedsjobs_taxonomies);$j++) {
 			$sedsjobs_taxonomiesarr[$j] = get_object_vars($sedsjobs_taxonomies[$j]);
 		}
-	//Get types from Jobman
-		$jobmanopts = get_option( "jobman_options" );
-		$jobmanopts = $jobmanopts['job_fields'][6]['data'];
-		$jobmanopts = str_replace("<br>","|",$jobmanopts);
-		$jobmanopts = str_replace("\n","|",$jobmanopts);
-		$jobmanopts = str_replace("\r","|",$jobmanopts);
-		$jobmanopts = str_replace("||","|",$jobmanopts);
-		$jobmanopts = explode("|",$jobmanopts);
+	//Get types 
+		$jobmanopts = get_option( "ossi-types" );
 	
 	//Search Form
 		?> 
@@ -71,7 +66,7 @@ function seds_jobsearch( $atts ){
 			echo '<h3>Year / Education: </h3>If Applicable<br><select multiple name="education[]" id="seds-yearsbox">';
 				//echo '<option value="ALL" selected> - - ALL - - <br>';
 				for ($i=0;$i<count($nasayears);$i++) {
-					echo '<option value="' . $i . '">' . $nasayears[$i] . '<br>';
+					echo '<option value="' . $nasayears[$i] . '">' . $nasayearsoption[$nasayears[$i]] . '<br>';
 				}
 			echo '</select><br>';
 			echo '<input type="button" name="Button" value="Select All" onclick="selectAll(\'seds-yearsbox\',true)" />';
@@ -256,9 +251,14 @@ function seds_jobsearch( $atts ){
 	echo "<br>POST: <pre>";
 	print_r($_POST);
 	echo "</pre><br>";	
-	echo "<br>seds_jobdisplay: <pre>";
-	print_r($seds_jobdisplay);
-	echo "</pre><br>";	
+	*/
+	echo "jobmanopts: <pre>";
+	print_r($jobmanopts);
+	echo "</pre>";
+	echo "POST<pre>";
+	print_r($_POST);
+	echo "</pre>";	
+	/*
 	echo "<br>POST: <pre>";
 	print_r($nasaoption[7]);
 	echo "</pre><br>";
