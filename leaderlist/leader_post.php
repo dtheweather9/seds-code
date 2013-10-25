@@ -2,6 +2,7 @@
 	
 //Include Files	
 	$sedsll_baseurl = str_replace("/wp-content/plugins/seds-code/leaderlist","", getcwd());
+	$sedsll_baseurl = str_replace("\wp-content\plugins\seds-code\leaderlist","", $sedsll_baseurl);
 	include_once($sedsll_baseurl . '/wp-blog-header.php');
 	include_once(ABSPATH  . '/wp-blog-header.php');
 	//WP NONCE check
@@ -144,7 +145,9 @@
 			);
 		$seds_changeleaderresult[] = civicrm_api('Relationship', 'delete', $seds_changeleaderparams);
 		}
-echo '<meta http-equiv="refresh" content="0;URL= '. $_POST['leaderredirect_url'] . '">';		
+		$urlredirect = str_replace("/wordpress/wordpress/","/wordpress/", $_POST['leaderredirect_url']);
+		$urlredirect = str_replace("wordpress/wordpress/","wordpress/", $urlredirect);
+echo '<meta http-equiv="refresh" content="0;URL= '. $urlredirect . '">';		
 }
 //Diagnistics
 	/*

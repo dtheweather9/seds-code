@@ -39,7 +39,7 @@ if ( class_exists( 'BP_Group_Extension' ) ) { // Recommended, to prevent problem
 	//Query order of officers
 		$seds_officerparams = array('version' => 3,'page' => 'CiviCRM','q' => 'civicrm/ajax/rest','sequential' => 1,
 		'option_sort'=>"weight",
-		'option_group_id' => 95,);
+		'option_group_id' => 88,);
 		$seds_officerresult = civicrm_api('OptionValue', 'get', $seds_officerparams);
 		$seds_officerlist = $seds_officerresult['values'];
 	//Current Buddypress Group
@@ -130,7 +130,7 @@ if ( class_exists( 'BP_Group_Extension' ) ) { // Recommended, to prevent problem
 	//Query order of officers
 		$seds_officerparams = array('version' => 3,'page' => 'CiviCRM','q' => 'civicrm/ajax/rest','sequential' => 1,
 		'option_sort'=>"weight",
-		'option_group_id' => 95,);
+		'option_group_id' => 88,);
 		$seds_officerresult = civicrm_api('OptionValue', 'get', $seds_officerparams);
 		$seds_officerlist = $seds_officerresult['values'];
 	//Current Buddypress Group
@@ -256,7 +256,7 @@ if ( class_exists( 'BP_Group_Extension' ) ) { // Recommended, to prevent problem
 	//Pull Custom Dropdowns
 	$seds_leadershipdropparams = array('version' => 3,'page' => 'CiviCRM','q' => 'civicrm/ajax/rest','sequential' => 1,
 		'option_sort'=>"weight",
-		'option_group_id' => 95,);
+		'option_group_id' => 88,);
 	$seds_leadershipdropresult = civicrm_api('OptionValue', 'get', $seds_leadershipdropparams);
 	$seds_leadershipdrop = $seds_leadershipdropresult['values'];
 	//Form for adding relationships / officers

@@ -15,6 +15,8 @@ require_once(ABSPATH . '/wp-admin/includes/plugin.php');
 require_once(ABSPATH . '/wp-content/plugins/seds-code/leaderlist.php');
 //Add [seds-chapters]
 require_once(ABSPATH . '/wp-content/plugins/seds-code/chapterslug.php');
+//Add [seds-chaptersdiscount]
+require_once(ABSPATH . '/wp-content/plugins/seds-code/discount/chapterslug.php');
 //Add [seds-map]
 require_once(ABSPATH . '/wp-content/plugins/seds-code/sedsmap.php');
 //Add [seds-getcard]

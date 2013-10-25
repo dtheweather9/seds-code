@@ -2,105 +2,105 @@
 <markers>
   <marker name="Aberystwyth SEDS" lat="0" lng="0" icon="red"/>
   <marker name="Afghanistan SEDS" lat="0.5" lng="0.5" icon="red"/>
-  <marker name="American Society of Gravitional and Space Research SEDS" lat="39.2828895" lng="-84.4697663" icon="usactive"/>
-  <marker name="Arizona State University SEDS" lat="33.4255104" lng="-111.9400054" icon="usactive"/>
+  <marker name="American Society of Gravitional and Space Research SEDS" lat="39.2828895" lng="-84.4697663" icon="red"/>
+  <marker name="Arizona State University SEDS" lat="33.4255104" lng="-111.9400054" icon="red"/>
   <marker name="Austria SEDS" lat="1" lng="1" icon="red"/>
   <marker name="Bath Electrical and Mechanical Eng. Society" lat="1.5" lng="1.5" icon="red"/>
   <marker name="Belgium SEDS" lat="2" lng="2" icon="red"/>
-  <marker name="Boston University SEDS" lat="2.5" lng="2.5" icon="usactive"/>
-  <marker name="Bristol SEDS" lat="3" lng="3" icon="red"/>
+  <marker name="Boston University SEDS" lat="42.3584308" lng="-71.0597732" icon="red"/>
+  <marker name="Bristol SEDS" lat="2.5" lng="2.5" icon="red"/>
   <marker name="Brown University SEDS" lat="41.8276065" lng="-71.4045052" icon="red"/>
-  <marker name="Caltech SEDS" lat="3.5" lng="3.5" icon="usactive"/>
-  <marker name="Carlton University SEDS" lat="4" lng="4" icon="red"/>
-  <marker name="Carnegie Mellon SEDS" lat="40.4441672" lng="-79.9433606" icon="usinactive"/>
-  <marker name="Colby College SEDS" lat="4.5" lng="4.5" icon="usactive"/>
-  <marker name="Colorado School of Mines Space Society" lat="5" lng="5" icon="usactive"/>
+  <marker name="Caltech SEDS" lat="3" lng="3" icon="red"/>
+  <marker name="Carlton University SEDS" lat="3.5" lng="3.5" icon="red"/>
+  <marker name="Carnegie Mellon SEDS" lat="40.4441672" lng="-79.9433606" icon="red"/>
+  <marker name="Colby College SEDS" lat="4" lng="4" icon="red"/>
+  <marker name="Colorado School of Mines Space Society" lat="4.5" lng="4.5" icon="red"/>
   <marker name="Cornell SEDS" lat="42.4439614" lng="-76.5018807" icon="red"/>
-  <marker name="Cranfield SEDS" lat="5.5" lng="5.5" icon="red"/>
-  <marker name="Cyprus SEDS" lat="6" lng="6" icon="red"/>
-  <marker name="Dakota Space Socity SEDS" lat="6.5" lng="6.5" icon="usactive"/>
-  <marker name="Edinburgh Astrosoc" lat="7" lng="7" icon="red"/>
+  <marker name="Cranfield SEDS" lat="5" lng="5" icon="red"/>
+  <marker name="Cyprus SEDS" lat="5.5" lng="5.5" icon="red"/>
+  <marker name="Dakota Space Socity SEDS" lat="6" lng="6" icon="red"/>
+  <marker name="Edinburgh Astrosoc" lat="6.5" lng="6.5" icon="red"/>
   <marker name="Embry Riddle SEDS" lat="29.1890201" lng="-81.0469642" icon="red"/>
-  <marker name="Exeter PhySoc" lat="7.5" lng="7.5" icon="red"/>
-  <marker name="Florida Institute of Technology SEDS" lat="8" lng="8" icon="red"/>
+  <marker name="Exeter PhySoc" lat="7" lng="7" icon="red"/>
+  <marker name="Florida Institute of Technology SEDS" lat="7.5" lng="7.5" icon="red"/>
   <marker name="George Washington Space Society" lat="38.9072309" lng="-77.0364641" icon="red"/>
   <marker name="Georgia Tech SEDS" lat="33.7724231" lng="-84.3950522" icon="red"/>
-  <marker name="Germany SEDS" lat="8.5" lng="8.5" icon="red"/>
-  <marker name="Harvard SEDS" lat="9" lng="9" icon="red"/>
-  <marker name="HertSEDS" lat="9.5" lng="9.5" icon="red"/>
-  <marker name="HertStudents for the Exploration and Development of Space" lat="10" lng="10" icon="red"/>
-  <marker name="Illinois Space Society" lat="10.5" lng="10.5" icon="usactive"/>
-  <marker name="Imperial College SEDS" lat="11" lng="11" icon="red"/>
-  <marker name="Iowa State Space Society" lat="11.5" lng="11.5" icon="usactive"/>
-  <marker name="Israel SEDS" lat="12" lng="12" icon="red"/>
-  <marker name="Jawahar Lal Nehru Technical University ( Hyderabad)" lat="12.5" lng="12.5" icon="red"/>
-  <marker name="John Jay Middle School SEDS" lat="13" lng="13" icon="red"/>
-  <marker name="Kansas University SEDS" lat="38.9582167" lng="-95.2478149" icon="usactive"/>
-  <marker name="KCL (Maxwell Society)" lat="13.5" lng="13.5" icon="red"/>
-  <marker name="Kent Space Society" lat="14" lng="14" icon="red"/>
-  <marker name="Kingston University SEDS" lat="14.5" lng="14.5" icon="red"/>
-  <marker name="Kumaraguru College Of Technology" lat="15" lng="15" icon="red"/>
-  <marker name="Kuwait SEDS" lat="15.5" lng="15.5" icon="red"/>
-  <marker name="Leeds SEDS" lat="16" lng="16" icon="red"/>
-  <marker name="Leicester AstRoSoc" lat="16.5" lng="16.5" icon="red"/>
-  <marker name="Liverpool Astrosoc" lat="17" lng="17" icon="red"/>
-  <marker name="Manattee Community College SEDS" lat="17.5" lng="17.5" icon="red"/>
-  <marker name="Manchester AeroSoc" lat="18" lng="18" icon="red"/>
+  <marker name="Germany SEDS" lat="8" lng="8" icon="red"/>
+  <marker name="Harvard SEDS" lat="8.5" lng="8.5" icon="red"/>
+  <marker name="HertSEDS" lat="9" lng="9" icon="red"/>
+  <marker name="HertStudents for the Exploration and Development of Space" lat="9.5" lng="9.5" icon="red"/>
+  <marker name="Illinois Space Society" lat="10" lng="10" icon="red"/>
+  <marker name="Imperial College SEDS" lat="10.5" lng="10.5" icon="red"/>
+  <marker name="Iowa State Space Society" lat="11" lng="11" icon="red"/>
+  <marker name="Israel SEDS" lat="11.5" lng="11.5" icon="red"/>
+  <marker name="Jawahar Lal Nehru Technical University ( Hyderabad)" lat="12" lng="12" icon="red"/>
+  <marker name="John Jay Middle School SEDS" lat="12.5" lng="12.5" icon="red"/>
+  <marker name="Kansas University SEDS" lat="38.9582167" lng="-95.2478149" icon="red"/>
+  <marker name="KCL (Maxwell Society)" lat="13" lng="13" icon="red"/>
+  <marker name="Kent Space Society" lat="13.5" lng="13.5" icon="red"/>
+  <marker name="Kingston University SEDS" lat="14" lng="14" icon="red"/>
+  <marker name="Kumaraguru College Of Technology" lat="14.5" lng="14.5" icon="red"/>
+  <marker name="Kuwait SEDS" lat="15" lng="15" icon="red"/>
+  <marker name="Leeds SEDS" lat="15.5" lng="15.5" icon="red"/>
+  <marker name="Leicester AstRoSoc" lat="16" lng="16" icon="red"/>
+  <marker name="Liverpool Astrosoc" lat="16.5" lng="16.5" icon="red"/>
+  <marker name="Manattee Community College SEDS" lat="17" lng="17" icon="red"/>
+  <marker name="Manchester AeroSoc" lat="17.5" lng="17.5" icon="red"/>
   <marker name="Massachusetts Institute of Technology SEDS" lat="42.3736158" lng="-71.1097335" icon="red"/>
-  <marker name="Montana Tech SEDS" lat="18.5" lng="18.5" icon="red"/>
-  <marker name="National Insitute Of Technology (Surathkal) SEDS" lat="19" lng="19" icon="red"/>
-  <marker name="National Insitute Of Technology (Trichy) SEDS" lat="19.5" lng="19.5" icon="red"/>
-  <marker name="Nepal SEDS" lat="20" lng="20" icon="red"/>
-  <marker name="Nigeria SEDS" lat="20.5" lng="20.5" icon="red"/>
-  <marker name="Norway SEDS" lat="21" lng="21" icon="red"/>
-  <marker name="NTU Astronomy and Physics Society" lat="21.5" lng="21.5" icon="red"/>
-  <marker name="Old Dominion University SEDS" lat="22" lng="22" icon="red"/>
+  <marker name="Montana Tech SEDS" lat="46.0123464" lng="-112.557698" icon="red"/>
+  <marker name="National Insitute Of Technology (Surathkal) SEDS" lat="18" lng="18" icon="red"/>
+  <marker name="National Insitute Of Technology (Trichy) SEDS" lat="18.5" lng="18.5" icon="red"/>
+  <marker name="Nepal SEDS" lat="19" lng="19" icon="red"/>
+  <marker name="Nigeria SEDS" lat="19.5" lng="19.5" icon="red"/>
+  <marker name="Norway SEDS" lat="20" lng="20" icon="red"/>
+  <marker name="NTU Astronomy and Physics Society" lat="20.5" lng="20.5" icon="red"/>
+  <marker name="Old Dominion University SEDS" lat="21" lng="21" icon="red"/>
   <marker name="Olin SEDS" lat="42.2809285" lng="-71.2377548" icon="red"/>
-  <marker name="Open University SEDS" lat="22.5" lng="22.5" icon="red"/>
-  <marker name="Oregon State Space Society" lat="23" lng="23" icon="red"/>
-  <marker name="Philippines SEDS" lat="23.5" lng="23.5" icon="red"/>
-  <marker name="Princeton Planetary Society" lat="24" lng="24" icon="red"/>
-  <marker name="Purdue SEDS" lat="24.5" lng="24.5" icon="usactive"/>
-  <marker name="Queen Mary University London PsiStar Society" lat="25" lng="25" icon="red"/>
-  <marker name="Rensselaer Polytechnic Institute SEDS" lat="25.5" lng="25.5" icon="red"/>
+  <marker name="Open University SEDS" lat="21.5" lng="21.5" icon="red"/>
+  <marker name="Oregon State Space Society" lat="22" lng="22" icon="red"/>
+  <marker name="Philippines SEDS" lat="22.5" lng="22.5" icon="red"/>
+  <marker name="Princeton Planetary Society" lat="23" lng="23" icon="red"/>
+  <marker name="Purdue SEDS" lat="23.5" lng="23.5" icon="red"/>
+  <marker name="Queen Mary University London PsiStar Society" lat="24" lng="24" icon="red"/>
+  <marker name="Rensselaer Polytechnic Institute SEDS" lat="24.5" lng="24.5" icon="red"/>
   <marker name="SEDS - Wichita State University" lat="37.6888889" lng="-97.3361111" icon="red"/>
-  <marker name="SEDS at Metropolitan State University of Denver" lat="26" lng="26" icon="usactive"/>
-  <marker name="SEDS Montana" lat="26.5" lng="26.5" icon="red"/>
-  <marker name="SEDS United Arab Emirates" lat="27" lng="27" icon="red"/>
-  <marker name="SEDS University of Memphis" lat="27.5" lng="27.5" icon="red"/>
-  <marker name="SEDS VIT" lat="28" lng="28" icon="red"/>
-  <marker name="Sheffield SEDS" lat="28.5" lng="28.5" icon="red"/>
-  <marker name="Singapore SEDS" lat="29" lng="29" icon="red"/>
-  <marker name="South Dakota School of Mines and Technology's SEDS" lat="29.5" lng="29.5" icon="usactive"/>
-  <marker name="Space Society of London" lat="30" lng="30" icon="red"/>
-  <marker name="Spain SEDS" lat="30.5" lng="30.5" icon="red"/>
-  <marker name="St. Louis SEDS" lat="31" lng="31" icon="usactive"/>
-  <marker name="Strathclyde SEDS" lat="31.5" lng="31.5" icon="red"/>
-  <marker name="Surrey EARS" lat="32" lng="32" icon="red"/>
-  <marker name="Texas A and M SEDS" lat="32.5" lng="32.5" icon="usactive"/>
-  <marker name="Turkey SEDS" lat="33" lng="33" icon="red"/>
-  <marker name="University at Buffalo SEDS" lat="33.5" lng="33.5" icon="usactive"/>
-  <marker name="University College London Mechanical Engineering Society" lat="34" lng="34" icon="red"/>
-  <marker name="University of Alabama-Huntsville SEDS" lat="34.5" lng="34.5" icon="red"/>
-  <marker name="University of Arizona SEDS" lat="35" lng="35" icon="red"/>
-  <marker name="University of California-Los Angeles SEDS" lat="34.0706662" lng="-118.4432385" icon="usactive"/>
-  <marker name="University of Central Florida SEDS" lat="35.5" lng="35.5" icon="usactive"/>
+  <marker name="SEDS at Metropolitan State University of Denver" lat="25" lng="25" icon="red"/>
+  <marker name="SEDS Montana" lat="25.5" lng="25.5" icon="red"/>
+  <marker name="SEDS United Arab Emirates" lat="26" lng="26" icon="red"/>
+  <marker name="SEDS University of Memphis" lat="26.5" lng="26.5" icon="red"/>
+  <marker name="SEDS VIT" lat="27" lng="27" icon="red"/>
+  <marker name="Sheffield SEDS" lat="27.5" lng="27.5" icon="red"/>
+  <marker name="Singapore SEDS" lat="28" lng="28" icon="red"/>
+  <marker name="South Dakota School of Mines and Technology's SEDS" lat="28.5" lng="28.5" icon="red"/>
+  <marker name="Space Society of London" lat="29" lng="29" icon="red"/>
+  <marker name="Spain SEDS" lat="29.5" lng="29.5" icon="red"/>
+  <marker name="St. Louis SEDS" lat="30" lng="30" icon="red"/>
+  <marker name="Strathclyde SEDS" lat="30.5" lng="30.5" icon="red"/>
+  <marker name="Surrey EARS" lat="31" lng="31" icon="red"/>
+  <marker name="Texas A and M SEDS" lat="31.5" lng="31.5" icon="red"/>
+  <marker name="Turkey SEDS" lat="32" lng="32" icon="red"/>
+  <marker name="University at Buffalo SEDS" lat="43.0012018" lng="-78.7860483" icon="red"/>
+  <marker name="University College London Mechanical Engineering Society" lat="32.5" lng="32.5" icon="red"/>
+  <marker name="University of Alabama-Huntsville SEDS" lat="33" lng="33" icon="red"/>
+  <marker name="University of Arizona SEDS" lat="33.5" lng="33.5" icon="red"/>
+  <marker name="University of California-Los Angeles SEDS" lat="34.0706662" lng="-118.4432385" icon="red"/>
+  <marker name="University of Central Florida SEDS" lat="34" lng="34" icon="red"/>
   <marker name="University of Chicago SEDS" lat="41.7901128" lng="-87.6007318" icon="red"/>
-  <marker name="University of Colorado at Boulder SEDS" lat="40.0149856" lng="-105.2705456" icon="usactive"/>
-  <marker name="University of Kentucky SEDS" lat="36" lng="36" icon="red"/>
-  <marker name="University of Michigan SEDS" lat="36.5" lng="36.5" icon="usactive"/>
+  <marker name="University of Colorado at Boulder SEDS" lat="40.0149856" lng="-105.2705456" icon="red"/>
+  <marker name="University of Kentucky SEDS" lat="34.5" lng="34.5" icon="red"/>
+  <marker name="University of Michigan SEDS" lat="35" lng="35" icon="red"/>
   <marker name="University of North Carolina SEDS" lat="35.9131996" lng="-79.0558445" icon="red"/>
   <marker name="University of Oklahoma SEDS" lat="35.2090784" lng="-97.4456923" icon="red"/>
-  <marker name="University of San Diego SEDS" lat="37" lng="37" icon="usactive"/>
-  <marker name="University of Southampton SEDS" lat="37.5" lng="37.5" icon="red"/>
-  <marker name="University of St Andrews AstroSoc" lat="38" lng="38" icon="red"/>
-  <marker name="University of the West of England SEDS" lat="38.5" lng="38.5" icon="red"/>
+  <marker name="University of San Diego SEDS" lat="32.7153292" lng="-117.1572551" icon="red"/>
+  <marker name="University of Southampton SEDS" lat="35.5" lng="35.5" icon="red"/>
+  <marker name="University of St Andrews AstroSoc" lat="36" lng="36" icon="red"/>
+  <marker name="University of the West of England SEDS" lat="36.5" lng="36.5" icon="red"/>
   <marker name="University of Virginia SEDS" lat="38.0363751" lng="-78.5022103" icon="red"/>
-  <marker name="University of Wisconsin Milwaukee SEDS" lat="43.078263" lng="-87.8819686" icon="usactive"/>
-  <marker name="University of Wisconsin-Madison SEDS" lat="39" lng="39" icon="usactive"/>
+  <marker name="University of Wisconsin Milwaukee SEDS" lat="43.078263" lng="-87.8819686" icon="red"/>
+  <marker name="University of Wisconsin-Madison SEDS" lat="37" lng="37" icon="red"/>
   <marker name="Utah State University SEDS" lat="41.7421513" lng="-111.8083322" icon="red"/>
-  <marker name="Virginia Tech SEDS" lat="39.5" lng="39.5" icon="red"/>
-  <marker name="Warwick Physoc" lat="40" lng="40" icon="red"/>
-  <marker name="Waterloo Space Society" lat="40.5" lng="40.5" icon="red"/>
-  <marker name="Yale Undergraduate Aerospace Association" lat="41.3065186" lng="-72.9310714" icon="usactive"/>
+  <marker name="Virginia Tech SEDS" lat="37.5" lng="37.5" icon="red"/>
+  <marker name="Warwick Physoc" lat="38" lng="38" icon="red"/>
+  <marker name="Waterloo Space Society" lat="38.5" lng="38.5" icon="red"/>
+  <marker name="Yale Undergraduate Aerospace Association" lat="41.3065186" lng="-72.9310714" icon="red"/>
 </markers>

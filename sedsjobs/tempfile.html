@@ -240,134 +240,819 @@ id="solarAction"
 </div>
 </div>
 </div>
-<div id="content_notab">
-<fieldset><legend>Application Error</legend>
-<form name="email_to_support" method="post" action="/ossi/web/error/index.cfm">
+<!-- Web Layout -->
+<div id="nav_tabs">
+<ul>
+<li ><a href="/ossi/web/public/guest/home/">Home</a>
+</li>
+<li id="current"><a href="/ossi/web/public/guest/searchOpps/">Search Opportunities</a>
+</li>
+<li ><a href="/ossi/web/students/login/">Log in/Register</a>
+</li>
+</ul>
+</div>
+<a name="maincontent"></a>
+<script type="text/javascript">
+function loadCorners() {
+// alert("loadcorners");
+settingsMain = {
+tl: { radius: 15 },
+tr: { radius: 15 },
+bl: { radius: 15 },
+br: { radius: 15 },
+antiAlias: true,
+autoPad: true
+}
+if (!isIE) {
+$("#contentBorder").corner(settingsMain);
+$("#content").corner(settingsMain);
+$("#content_sub_nav").corner(settingsMain);
+$("#content_notab").corner(settingsMain);
+$("#topNavLinks").corner(settingsMain);
+$("fieldset").corner(settingsMain);
+}
+}
+$(function() {
+loadCorners();
+});
+</script>
+<div id="contentBorder">
+<div id="content"> 
+<script type="text/javascript" src="/ossi/common/js/jw/jwplayer.js"></script>
+<style type="text/css" media="screen">
+#imgGallerySection {
+margin-left:auto;
+margin-right:auto;
+padding-bottom:15px;
+}
+#imgGallerySection ul {
+margin-left:auto;
+margin-right:auto;
+list-style:none;
+text-align:center;
+}
+#imgGallerySection ul li {
+float:left;
+line-height:1;
+text-align:center;
+display: inline;
+padding-bottom:20px;
+}
+#imgGallerySection a {
+display:block;
+padding:5px 20px 6px 20px;
+text-decoration:none;
+font-weight:bold;
+font-size: 13px;
+color:#765;
+}
+</style>
+<script type="text/javascript">
+$.fx.speeds._default = 1000;
+$(function() {
+$('#viddialog').dialog({
+autoOpen: false,
+width: 850,
+height: 550,
+show: 'blind',
+hide: 'explode'
+});
+});
+function openVideoWindow(vidRefId) {
+var params = {};
+params.allowfullscreen="true";
+params.allowscriptaccess="always";
+params.wmode="opaque";
+if (vidRefId == 'SOLARMAIN') {
+$( "#viddialog" ).dialog({ title: 'OSSI, Connecting students and mentors' });
+jwplayer("mediaspace").setup({
+file: "https://intern.nasa.gov/ossi/web/public/video/OSSI.flv",
+height: 500,
+width: 800,
+autostart: true
+});
+} else if (vidRefId == 'STUDENT_TUTORIAL_1') {
+$( "#viddialog" ).dialog({ title: 'Student Tutorial: Registration, Profile, and Application' });
+jwplayer("mediaspace").setup({
+file: "https://intern.nasa.gov/ossi/web/public/video/OSSI_SOLAR_tutorial_1.flv",
+height: 500,
+width: 800,
+autostart: true,
+tracks: [{ 
+file: "https://intern.nasa.gov/ossi/web/public/video/OSSI_SOLAR_tutorial_1.xml",
+label: "English",
+}],
+});
+} else if (vidRefId == 'STUDENT_TUTORIAL_2') {
+$( "#viddialog" ).dialog({ title: 'Student Tutorial: Searching For, and Applying to, Opportunities' });
+jwplayer("mediaspace").setup({
+file: "https://intern.nasa.gov/ossi/web/public/video/OSSI_SOLAR_tutorial_2.flv",
+height: 500,
+width: 800,
+autostart: true,
+tracks: [{ 
+file: "https://intern.nasa.gov/ossi/web/public/video/OSSI_SOLAR_tutorial_2.xml",
+label: "English",
+}],
+});
+}
+$('#viddialog').dialog('open');
+}
+</script>
+<div id="viddialog" title="OSSI Video">
+<div id='mediaspace'></div>
+</div>
+<form name="srchForm" id="srchForm" method="post" action="index.cfm" onsubmit=""
+>
 <input 
 type="hidden" 
-name="errorLogId" 
-value="52973" 
-id="errorLogId" 
+name="solarRender" 
+value="add" 
+id="solarRender" 
 />
+<fieldset>
+<legend>View Opportunity</legend>
+<input 
+type="hidden" 
+name="id" 
+value="7443" 
+id="id" 
+/>
+<!-- Action Message section -->
+<!-- Action Message section -->
+<!-- Error section -->
+<!-- Error section -->
+<script type="text/javascript">
+function setOpportunityRequiredFields() {
+var oppProcessType = $('#fOnboardingOnly').val();
+var onboardingOnly = false;
+if (oppProcessType == '1') {
+onboardingOnly = true;
+}
+if (onboardingOnly) {
+setOnboardingOnlyRequiredFields();
+}
+else {
+setStandardRequiredFields();
+}
+}
+// Toggle required fields and hidden subsections of the form
+function toggleOnboardingOnlyRequiredFields() {
+$('label[for=zipCode] > span').toggleClass("hide");
+$('label[for=description] > span').toggleClass("hide");
+$('label[for=projectOutcome] > span').toggleClass("hide");
+$('label[for=eduLevel] > span').toggleClass("hide");
+$('label[for=mentorFundingAmount] > span').toggleClass("hide");
+$('label[for=mentorFundingSource] > span').toggleClass("hide");
+$('label[for=building] > span').toggleClass("hide");
+$('label[for=room] > span').toggleClass("hide");
+$('label[for=workEnvironment] > span').toggleClass("hide");
+$('label[for=altMentorId] > span').toggleClass("hide");
+$('#alternateMentorData').toggleClass("hide");
+$('#approverData').toggleClass("hide");
+}
+function setOnboardingOnlyRequiredFields() {
+var tempField = $('#description').val();
+if (tempField == "") {
+$('#description').val("N/A - Onboarding Only Opportunity");
+}
+tempField = $('#projectOutcome').val();
+if (tempField == "") {
+$('#projectOutcome').val("N/A - Onboarding Only Opportunity");
+}
+tempField = $('#mentorFundingSource').val();
+if (tempField == "") {
+$('#mentorFundingSource').val("MENTOR_NONE");
+}
+toggleOnboardingOnlyRequiredFields();
+// alert("OBO");
+}
+function setStandardRequiredFields() {
+toggleOnboardingOnlyRequiredFields();
+// alert("Standard");
+}
+$(document).ready(function() {
+var oppProcessType = $('#fOnboardingOnly').val();
+if (oppProcessType == '1') {
+toggleOnboardingOnlyRequiredFields();
+}
+});
+</script>
+<script language="javascript">
+function populateAddress()
+{
+var centerAdds=new Object();centerAdds["msfc"]=new Object();centerAdds["msfc"]["zip"]="35812";centerAdds["msfc"]["state"]="AL";centerAdds["msfc"]["city"]="MSFC, Huntsville";centerAdds["msfc"]["mail"]="Marshall Space Flight Center";centerAdds["msfc"]["zipplus"]="";centerAdds["larc"]=new Object();centerAdds["larc"]["zip"]="23681";centerAdds["larc"]["state"]="VA";centerAdds["larc"]["city"]="Hampton";centerAdds["larc"]["mail"]="Langley Research Center";centerAdds["larc"]["zipplus"]="2199";centerAdds["wff"]=new Object();centerAdds["wff"]["zip"]="23337";centerAdds["wff"]["state"]="VA";centerAdds["wff"]["city"]="Wallops Island";centerAdds["wff"]["mail"]="Wallops Flight Facility";centerAdds["wff"]["zipplus"]="";centerAdds["ksc"]=new Object();centerAdds["ksc"]["zip"]="32899";centerAdds["ksc"]["state"]="FL";centerAdds["ksc"]["city"]="Kennedy Space Center";centerAdds["ksc"]["mail"]=" Mail Code EX-E";centerAdds["ksc"]["zipplus"]="";centerAdds["wstf"]=new Object();centerAdds["wstf"]["zip"]="88004";centerAdds["wstf"]["state"]="NM";centerAdds["wstf"]["city"]="Las Cruces";centerAdds["wstf"]["mail"]="12600 NASA Road";centerAdds["wstf"]["zipplus"]="0020";centerAdds["jsc"]=new Object();centerAdds["jsc"]["zip"]="77058";centerAdds["jsc"]["state"]="TX";centerAdds["jsc"]["city"]="Houston";centerAdds["jsc"]["mail"]="2101 NASA Parkway";centerAdds["jsc"]["zipplus"]="3696";centerAdds["wsc"]=new Object();centerAdds["wsc"]["zip"]="88012";centerAdds["wsc"]["state"]="NM";centerAdds["wsc"]["city"]="Las Cruces";centerAdds["wsc"]["mail"]="12600 NASA Road ";centerAdds["wsc"]["zipplus"]="";centerAdds["ssc"]=new Object();centerAdds["ssc"]["zip"]="39529";centerAdds["ssc"]["state"]="MS";centerAdds["ssc"]["city"]="Stennis Space Center";centerAdds["ssc"]["mail"]="Stennis Space Center";centerAdds["ssc"]["zipplus"]="";centerAdds["jpl"]=new Object();centerAdds["jpl"]["zip"]="91109";centerAdds["jpl"]["state"]="CA";centerAdds["jpl"]["city"]="Pasadena";centerAdds["jpl"]["mail"]="4800 Oak Grove Drive";centerAdds["jpl"]["zipplus"]="8099";centerAdds["arc"]=new Object();centerAdds["arc"]["zip"]="94035";centerAdds["arc"]["state"]="CA";centerAdds["arc"]["city"]="Moffett Field";centerAdds["arc"]["mail"]="Mail Stop 226-8";centerAdds["arc"]["zipplus"]="";centerAdds["ivv"]=new Object();centerAdds["ivv"]["zip"]="26554";centerAdds["ivv"]["state"]="WV";centerAdds["ivv"]["city"]="Fairmont";centerAdds["ivv"]["mail"]="100 University Drive";centerAdds["ivv"]["zipplus"]="8817";centerAdds["giss"]=new Object();centerAdds["giss"]["zip"]="10025";centerAdds["giss"]["state"]="NY";centerAdds["giss"]["city"]="2880 Broadway";centerAdds["giss"]["mail"]="NASA Goddard Institute for Space Studies";centerAdds["giss"]["zipplus"]="2236";centerAdds["gsfc"]=new Object();centerAdds["gsfc"]["zip"]="20771";centerAdds["gsfc"]["state"]="MD";centerAdds["gsfc"]["city"]="Greenbelt";centerAdds["gsfc"]["mail"]="8800 Greenbelt Rd";centerAdds["gsfc"]["zipplus"]="2400";centerAdds["hq"]=new Object();centerAdds["hq"]["zip"]="20546";centerAdds["hq"]["state"]="DC";centerAdds["hq"]["city"]="Washington";centerAdds["hq"]["mail"]="NASA Headquarters";centerAdds["hq"]["zipplus"]="0001";centerAdds["dfrc"]=new Object();centerAdds["dfrc"]["zip"]="93523";centerAdds["dfrc"]["state"]="CA";centerAdds["dfrc"]["city"]="Edwards";centerAdds["dfrc"]["mail"]="4800 Lilly Drive";centerAdds["dfrc"]["zipplus"]="0273";centerAdds["nssc"]=new Object();centerAdds["nssc"]["zip"]="39529";centerAdds["nssc"]["state"]="MS";centerAdds["nssc"]["city"]="Stennis Space Center";centerAdds["nssc"]["mail"]="NASA Shared Services Center";centerAdds["nssc"]["zipplus"]="6000";centerAdds["grc"]=new Object();centerAdds["grc"]["zip"]="44135";centerAdds["grc"]["state"]="OH";centerAdds["grc"]["city"]="Cleveland";centerAdds["grc"]["mail"]="21000 Brookpark Road";centerAdds["grc"]["zipplus"]="3191";centerAdds["maf"]=new Object();centerAdds["maf"]["zip"]="70129";centerAdds["maf"]["state"]="LA";centerAdds["maf"]["city"]="New Orleans";centerAdds["maf"]["mail"]="13800 Old Gentilly Road";centerAdds["maf"]["zipplus"]="2218";;
+var acronym = document.getElementById('facility').options[document.getElementById('facility').selectedIndex].value.toLowerCase();
+document.opportunity.mailingAddress.value= centerAdds[acronym]["mail"];
+document.opportunity.city.value = centerAdds[acronym]["city"];
+document.opportunity.state.value = centerAdds[acronym]["state"];
+document.opportunity.zipCode.value = centerAdds[acronym]["zip"];
+document.opportunity.zipPlus.value = centerAdds[acronym]["zipplus"];
+}
+</script>
+<script type="text/javascript">
+function searchMentorForm(fieldPrefix, searchNed, cfFunction) {
+$.unblockUI(); 
+if ((fieldPrefix == null) || (fieldPrefix == "") || (fieldPrefix == "undefined")) {
+fieldPrefix = "mentor";
+}
+if ((searchNed == null) || (searchNed == "") || (searchNed == "undefined")) {
+searchNed = "false";
+}
+if ((cfFunction != null) && (cfFunction != "") && (cfFunction != "undefined")) {
+fieldPrefix = "";
+} else {
+cfFunction = "";
+}
+var fullurl = "/ossi/web/mentors/mentorSearch/index.cfm"; 
+var params = "solarAction=xml&subAction=search&relPath=" + escape('/ossi/') + "&fieldPrefix=" + escape(fieldPrefix) + "&searchNed=" + escape(searchNed) + "&cbf=" + escape(cfFunction);
+getData('POST', 'ACTION', fullurl, params);
+}
+function sortResults(sortDir, sortId) {
+var sort = $("#sort").val(sortDir);
+var orderBy = $("#orderBy").val(sortId);
+searchMentors();
+}
+function searchMentors() {
+openStatusDiv();
+var fieldPrefix = $("#fieldPrefix").val();
+var cbf = $("#cbf").val();
+var lastName = $("#lastName").val();
+var primaryEmailAddress = $("#primaryEmailAddress").val();
+var searchNed = $("#searchNed").val();
+var sort = $("#sort").val();
+var orderBy = $("#orderBy").val();
+var fullurl = "/ossi/web/mentors/mentorSearch/index.cfm"; 
+var params = "solarAction=xml&subAction=runsearch&lastName=" + escape(lastName) + "&primaryEmailAddress=" + escape(primaryEmailAddress) + "&relPath=" + escape('/ossi/') + "&fieldPrefix=" + escape(fieldPrefix) + "&searchNed=" + escape(searchNed) + "&sort=" + escape(sort) + "&orderBy=" + escape(orderBy) + "&cbf=" + escape(cbf);
+getData('POST', 'ACTION', fullurl, params);
+}
+function selectMentor(thisMentorId, name, fieldPrefix){
+var mentorIdElement = document.getElementById(fieldPrefix + "Id");
+mentorIdElement.value = thisMentorId;
+var mentorNameElement = document.getElementById(fieldPrefix + "Name");
+mentorNameElement.innerHTML = name;
+showHideAction();
+}
+function openStatusDiv() {
+var statusBox = document.getElementById('statusBxjq');
+statusBox.style.display='block';
+statusBox.style.visibility='visible';
+}
+</script>
+<h1>View Opportunity</h1>
+<!-- Action Message section -->
+<!-- Action Message section -->
+<!-- Error section -->
+<!-- Error section -->
 <p>
-There has been an error in the processing of the requested page.
-We have logged the the error and your user information that will help us identify and correct the problem.
-The Error Reference Number is 
-<a href='/ossi/web/error/index.cfm?solarAction=view&id=52973'><b>52973</b></a>.
 </p>
-<p>
-<label for="userComments"
+<p></p>
+<input 
+type="hidden" 
+name="requestid" 
+value="13063" 
+id="requestid" 
+/>
+<div id="opportunityInfo">
+<fieldset>
+<legend>Opportunity Info</legend>
+<table class="formTable">
+<tr>
+<td>
+<span class="readOnlyLabel">
+Opportunity Title:
+</span>
+</td>
+<td>
+<input type="hidden" 
+name="title" 
+value="Summer of Innovation" />
+Summer of Innovation
+</td>
+</tr>
+<tr>
+<td width="40%">
+Opportunity Type:
+</td>
+<td>
+<input 
+type="hidden" 
+name="type" 
+value="OPP_INTERN" 
+id="type" 
+/>
+Internship 
+<p align="left" id="fellInstruct" style="display:none">
+Students applying for fellowship opportunities will be required to submit a proposal to the mentor. Prior to submitting a proposal, students will create a proposal summary with a description of their idea, and they will submit it to the mentor for their approval. The mentor has 10 business days to respond to each proposal summary. It is anticipated that mentors will only approve a couple proposal summaries, and they will work with those students to create their proposals and to make sure the topic is mutually beneficial to both the mentor and student.
+</p>
+</td>
+</tr>
+<input 
+type="hidden" 
+name="fOnboardingOnly" 
+value="0" 
+id="fOnboardingOnly" 
+/>
+<tr>
+<td>
+<label for="description"
 >
-Please enter a description of your actions immediately prior to this error occuring:
+Opportunity Description/Objective (specific student assignment):
+</label>
+</td>
+<td>
+<input type="hidden" 
+name="description" 
+value="The Summer of Innovation goal is to work with partners and educators across America using the excitement of space to engage the nation's middle school students in Science, Technology, Engineering, and Math (STEM). This position would require an individual to work with master educators to provide an intensive STEM learning support to middle school students and educators during the summer months. It would also give a student an opportunity to test their skills with communicating their engineering abilities to the students." />
+The Summer of Innovation goal is to work with partners and educators across America using the excitement of space to engage the nation's middle school students in Science, Technology, Engineering, and Math (STEM). This position would require an individual to work with master educators to provide an intensive STEM learning support to middle school students and educators during the summer months. It would also give a student an opportunity to test their skills with communicating their engineering abilities to the students.
+</td>
+</tr>
+<tr>
+<td>
+<label for="projectOutcome"
+>
+Expected opportunity outcome (i.e. research, final report, poster presentation, etc.):
+</label>
+</td>
+<td>
+<input type="hidden" 
+name="projectOutcome" 
+value="research paper or poster session presentation" />
+research paper or poster session presentation
+</td>
+</tr>
+<tr>
+<td>
+<label for="skills"
+>
+Student's Computer and/or Special Skills:
+</label>
+</td>
+<td>
+<input type="hidden" 
+name="skills" 
+value="Word and Excel" />
+Word and Excel
+</td>
+</tr>
+<tr>
+<td>
+<label for="comments"
+>
+Comments: 
+</label>
+</td>
+<td>
+<input type="hidden" 
+name="comments" 
+value="" />
+</td>
+</tr>
+</table>
+</fieldset>
+<fieldset>
+<legend>Session and Student Info</legend>
+<table class="formTable">
+<tr>
+<td>
+<label for="sessions"
+>
+Session(s):
 </label>
 <br />
-<textarea 
-						
-							cols="80" 
-						 
-						
-							rows="4" 
-						 
-						
-							name="userComments" 
-						 
-						
-							id="userComments" 
-						 
-						 
-						 
-						 
-						
-						
-						
-
-
-
-
-
-
-
-		
-			
-			
-			
-				
-				
-				 
-			
-		
-		
-	
-						
-						
-                        
-						
-						></textarea>
+</td>
+<td>
+<input 
+type="hidden" 
+name="sessions" 
+value="35" 
+id="sessions" 
+/>
+Summer 2013 
+</td>
+</tr>
+<tr>
+<td>
+<label for="numberOfSlots"
+>
+This opportunity is for how many students per session?
+</label>
+</td>
+<td>
+<input type="hidden" 
+name="numberOfSlots" 
+value="1" />
+1
+</td>
+</tr>
+<tr>
+<td>
+<label for="eduLevel"
+>
+Desired student academic level(s) at the time the opportunity would begin:
+</label>
+<br/>
+(Note: Freshman-Senior refer to college students, not high school)
+</td>
+<td>
+<input 
+type="hidden" 
+name="eduLevel" 
+value="SOPHOMORE_LEVEL" 
+id="eduLevel" 
+/>
+Sophomore <br />
+<input 
+type="hidden" 
+name="eduLevel" 
+value="JUNIOR_LEVEL" 
+id="eduLevel" 
+/>
+Junior <br />
+<input 
+type="hidden" 
+name="eduLevel" 
+value="SENIOR_LEVEL" 
+id="eduLevel" 
+/>
+Senior <br />
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<strong>Academic discipline(s) that interested students should be studying.</strong>
+</td>
+</tr>
+<tr class="secondLineFrm">
+<td>&nbsp;</td>
+<td align="center" valign="middle" nowrap>
+Mathematics
+-
+General<br>
+Other
+-
+Education<br>
+Technology
+-
+General<br>
+</td>
+</tr>
+</table>
+</fieldset>
+<fieldset>
+<legend>Work Site Location</legend>
+<table class="formTable">
+<tr>
+<td>
+<label for="facility"
+>
+NASA Center/Facility Name:
+</label>
 <br />
-Click the button below to email this information to OSSI Support.
+</td>
+<td>
+<input 
+type="hidden" 
+name="facility" 
+value="LARC" 
+id="facility" 
+/>
+Langley Research Center (LARC) 
+</td>
+</tr>
+<input 
+type="hidden" 
+name="addressId" 
+value="199050" 
+id="addressId" 
+/>
+<tr>
+<td>
+<label for="nonNasaSite"
+>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - OR - &nbsp;
+</label>
 <br />
-<input type="hidden" name="hiddensolarAction5AB516F1-B0D7-453C-B23DAAE9CFC9E2A6" id="hiddensolarAction5AB516F1-B0D7-453C-B23DAAE9CFC9E2A6" value="save">
+<label for="nonNasaSite"
+>
+Non-NASA Facility Name:
+</label>
+</td>
+<td>
+<br />
+<input type="hidden" 
+name="nonNasaSite" 
+value="" />
+</td>
+</tr>
+<tr>
+<td>
+<label for="mailingAddress"
+>
+Mailing Address:
+</label>
+</td>
+<td>
+<input type="hidden" 
+name="mailingAddress" 
+value="Langley Research Center" />
+Langley Research Center
+</td>
+</tr>
+<tr>
+<td>
+<label for="city"
+>
+City
+</label>
+/
+<label for="state"
+>
+State
+</label>
+:
+</td>
+<td>
+<input type="hidden" 
+name="city" 
+value="Hampton" />
+Hampton
+<input 
+type="hidden" 
+name="state" 
+value="VA" 
+id="state" 
+/>
+Virginia 
+</td>
+</tr>
+<tr>
+<td>
+<label for="zipCode"
+>
+Zip code:
+</label>
+</td>
+<td>
+<input type="hidden" 
+name="zipCode" 
+value="23681" />
+23681
+<label for="zipPlus"
+>
++4
+</label>
+<input type="hidden" 
+name="zipPlus" 
+value="2199" />
+2199
+</td>
+</tr>
+<tr>
+<td colspan="2"><hr /></td>
+</tr>
+<tr>
+<td>
+<label for="building"
+>
+Building Number/Name
+</label>
+&amp;
+<label for="room"
+>
+Room Number
+</label>
+:
+</td>
+<td>
+<input type="hidden" 
+name="building" 
+value="1216 " />
+1216 
+/
+<input type="hidden" 
+name="room" 
+value="214" />
+214
+</td>
+</tr>
+<tr>
+<td>
+<label for="workEnvironment"
+>
+Work Environment:
+</label>
+</td>
+<td>
+<input 
+type="hidden" 
+name="workEnvironment" 
+value="ENV_OFFICE" 
+id="workEnvironment" 
+/>
+Office Setting 
+</td>
+</tr>
+<tr>
+<td>
+Work Environment:
+</td>
+<td>
+<input type="hidden" 
+name="otherWorkEnvironment" 
+value="" />
+</td>
+</tr>
+</table>
+</fieldset>
+</div>
+<br>
+<hr />
+<div class="center">
+<input type="hidden" name="hiddensolarAction464EF123-B5B3-4A80-964050AB8F94BD10" id="hiddensolarAction464EF123-B5B3-4A80-964050AB8F94BD10" value="save">
 <script type="text/javascript">
-function setupButtonSolarAction5AB516F1B0D7453CB23DAAE9CFC9E2A6() {
+function setupButtonSolarAction464EF123B5B34A80964050AB8F94BD10() {
 // rename any "solarAction" buttons, since IE will use all, even those that arn't clicked
 var solarActionButtons = document.getElementsByName('solarAction');
 for (var i=0;i<solarActionButtons.length;i++)
 {
-solarActionButtons[i].name = 'solarAction5AB516F1-B0D7-453C-B23DAAE9CFC9E2A6' + i;
-solarActionButtons[i].id = 'solarAction5AB516F1-B0D7-453C-B23DAAE9CFC9E2A6' + i;
+solarActionButtons[i].name = 'solarAction464EF123-B5B3-4A80-964050AB8F94BD10' + i;
+solarActionButtons[i].id = 'solarAction464EF123-B5B3-4A80-964050AB8F94BD10' + i;
 }
 // set up the hidden input name
-var solarActionElement = document.getElementById('hiddensolarAction5AB516F1-B0D7-453C-B23DAAE9CFC9E2A6');
+var solarActionElement = document.getElementById('hiddensolarAction464EF123-B5B3-4A80-964050AB8F94BD10');
 solarActionElement.name = 'solarAction';
 }
-function submitButtonAction5AB516F1B0D7453CB23DAAE9CFC9E2A6() {
-var solarButtonElement = document.getElementById('hiddensolarAction5AB516F1-B0D7-453C-B23DAAE9CFC9E2A6');
+function submitButtonAction464EF123B5B34A80964050AB8F94BD10() {
+var solarButtonElement = document.getElementById('hiddensolarAction464EF123-B5B3-4A80-964050AB8F94BD10');
 solarButtonElement.form.submit();
 }
 </script>
-<span id="buttonspan0C3A9D3BDCF74748BBFB691B45238167" >
-<button type="button" name="solarActionIEMod5AB516F1-B0D7-453C-B23DAAE9CFC9E2A6"
-value="save" id="solarAction5AB516F1-B0D7-453C-B23DAAE9CFC9E2A6"
-class="positive" onclick="setupButtonSolarAction5AB516F1B0D7453CB23DAAE9CFC9E2A6();;submitButtonAction5AB516F1B0D7453CB23DAAE9CFC9E2A6();"
+<span id="buttonspanCCC537705F424756BE804ABA8391B96A" >
+<button type="button" name="solarActionIEMod464EF123-B5B3-4A80-964050AB8F94BD10"
+value="save" id="solarAction464EF123-B5B3-4A80-964050AB8F94BD10"
+class="positive" onclick="setupButtonSolarAction464EF123B5B34A80964050AB8F94BD10();;submitButtonAction464EF123B5B34A80964050AB8F94BD10();"
 >
 <img name="" id="" class="" alt="" src="/ossi/web/images/icons/check_icon.png">
-Submit Information
+Register to Apply
 </button></span>
 <script type="text/javascript">
-$('#buttonspan0C3A9D3BDCF74748BBFB691B45238167').removeAttr("style");
+$('#buttonspanCCC537705F424756BE804ABA8391B96A').removeAttr("style");
 </script>
 <noscript >
-<label for="solarAction5AB516F1-B0D7-453C-B23DAAE9CFC9E2A6">Submit Information: </label>
+<label for="solarAction464EF123-B5B3-4A80-964050AB8F94BD10">Register to Apply: </label>
 <input type="button"
-name="solarActionIEMod5AB516F1-B0D7-453C-B23DAAE9CFC9E2A6"
+name="solarActionIEMod464EF123-B5B3-4A80-964050AB8F94BD10"
 value="save"
-id="solarAction5AB516F1-B0D7-453C-B23DAAE9CFC9E2A6"
+id="solarAction464EF123-B5B3-4A80-964050AB8F94BD10"
 class="positive"
-onclick="setupButtonSolarAction5AB516F1B0D7453CB23DAAE9CFC9E2A6();;submitButtonAction5AB516F1B0D7453CB23DAAE9CFC9E2A6();"
+onclick="setupButtonSolarAction464EF123B5B34A80964050AB8F94BD10();;submitButtonAction464EF123B5B34A80964050AB8F94BD10();"
 />
 </noscript>
-&nbsp; &nbsp;
-<span id="buttonspan3AB4F7C0CA7F44B7AD18D5CAA12375E3" >
+&nbsp;&nbsp;
+<span id="buttonspan678C191266F444AB8899F57F204908A1" >
 <button type="button" name="solarAction"
-id="solarAction420348B9-E621-4CAF-9EB70720DF10BB47"
-onclick="history.back();"
+value="print" id="solarAction853366D6-2B45-4004-9575EDE83B0B4BC6"
+onclick="openPrintWindow('?solarAction=print&id=7443', 'Opportunity');"
 >
-Go Back
+Print
 </button></span>
 <script type="text/javascript">
-$('#buttonspan3AB4F7C0CA7F44B7AD18D5CAA12375E3').removeAttr("style");
+$('#buttonspan678C191266F444AB8899F57F204908A1').removeAttr("style");
 </script>
 <noscript >
-<label for="solarAction420348B9-E621-4CAF-9EB70720DF10BB47">Go Back: </label>
+<label for="solarAction853366D6-2B45-4004-9575EDE83B0B4BC6">Print: </label>
 <input type="button"
 name="solarAction"
-id="solarAction420348B9-E621-4CAF-9EB70720DF10BB47"
-onclick="history.back();"
+value="print"
+id="solarAction853366D6-2B45-4004-9575EDE83B0B4BC6"
+onclick="openPrintWindow('?solarAction=print&id=7443', 'Opportunity');"
 />
 </noscript>
-</p>
-</form>
+&nbsp;&nbsp;
+<input type="hidden" name="hiddensolarActionA9BCE702-1E9F-40A2-97C387A2DB964F2D" id="hiddensolarActionA9BCE702-1E9F-40A2-97C387A2DB964F2D" value="cancel">
+<script type="text/javascript">
+function setupButtonSolarActionA9BCE7021E9F40A297C387A2DB964F2D() {
+// rename any "solarAction" buttons, since IE will use all, even those that arn't clicked
+var solarActionButtons = document.getElementsByName('solarAction');
+for (var i=0;i<solarActionButtons.length;i++)
+{
+solarActionButtons[i].name = 'solarActionA9BCE702-1E9F-40A2-97C387A2DB964F2D' + i;
+solarActionButtons[i].id = 'solarActionA9BCE702-1E9F-40A2-97C387A2DB964F2D' + i;
+}
+// set up the hidden input name
+var solarActionElement = document.getElementById('hiddensolarActionA9BCE702-1E9F-40A2-97C387A2DB964F2D');
+solarActionElement.name = 'solarAction';
+}
+function submitButtonActionA9BCE7021E9F40A297C387A2DB964F2D() {
+var solarButtonElement = document.getElementById('hiddensolarActionA9BCE702-1E9F-40A2-97C387A2DB964F2D');
+solarButtonElement.form.submit();
+}
+</script>
+<span id="buttonspan71BBD1B350EC43BE998638983DF54C9B" >
+<button type="button" name="solarActionIEModA9BCE702-1E9F-40A2-97C387A2DB964F2D"
+value="cancel" id="solarActionA9BCE702-1E9F-40A2-97C387A2DB964F2D"
+class="negative" onclick="setupButtonSolarActionA9BCE7021E9F40A297C387A2DB964F2D();;submitButtonActionA9BCE7021E9F40A297C387A2DB964F2D();"
+>
+<img name="" id="" class="" alt="" src="/ossi/web/images/icons/cross.png">
+Cancel
+</button></span>
+<script type="text/javascript">
+$('#buttonspan71BBD1B350EC43BE998638983DF54C9B').removeAttr("style");
+</script>
+<noscript >
+<label for="solarActionA9BCE702-1E9F-40A2-97C387A2DB964F2D">Cancel: </label>
+<input type="button"
+name="solarActionIEModA9BCE702-1E9F-40A2-97C387A2DB964F2D"
+value="cancel"
+id="solarActionA9BCE702-1E9F-40A2-97C387A2DB964F2D"
+class="negative"
+onclick="setupButtonSolarActionA9BCE7021E9F40A297C387A2DB964F2D();;submitButtonActionA9BCE7021E9F40A297C387A2DB964F2D();"
+/>
+</noscript>
+&nbsp;&nbsp;
+<input type="hidden" name="hiddensolarAction7DA5C7C0-C8DC-4D0F-9A2F987A42C8D5C0" id="hiddensolarAction7DA5C7C0-C8DC-4D0F-9A2F987A42C8D5C0" value="default">
+<script type="text/javascript">
+function setupButtonSolarAction7DA5C7C0C8DC4D0F9A2F987A42C8D5C0() {
+// rename any "solarAction" buttons, since IE will use all, even those that arn't clicked
+var solarActionButtons = document.getElementsByName('solarAction');
+for (var i=0;i<solarActionButtons.length;i++)
+{
+solarActionButtons[i].name = 'solarAction7DA5C7C0-C8DC-4D0F-9A2F987A42C8D5C0' + i;
+solarActionButtons[i].id = 'solarAction7DA5C7C0-C8DC-4D0F-9A2F987A42C8D5C0' + i;
+}
+// set up the hidden input name
+var solarActionElement = document.getElementById('hiddensolarAction7DA5C7C0-C8DC-4D0F-9A2F987A42C8D5C0');
+solarActionElement.name = 'solarAction';
+}
+function submitButtonAction7DA5C7C0C8DC4D0F9A2F987A42C8D5C0() {
+var solarButtonElement = document.getElementById('hiddensolarAction7DA5C7C0-C8DC-4D0F-9A2F987A42C8D5C0');
+solarButtonElement.form.submit();
+}
+</script>
+<span id="buttonspan3BB45094CFA14D0492E6409A826861BE" >
+<button type="button" name="solarActionIEMod7DA5C7C0-C8DC-4D0F-9A2F987A42C8D5C0"
+value="default" id="solarAction7DA5C7C0-C8DC-4D0F-9A2F987A42C8D5C0"
+onclick="setupButtonSolarAction7DA5C7C0C8DC4D0F9A2F987A42C8D5C0();;submitButtonAction7DA5C7C0C8DC4D0F9A2F987A42C8D5C0();"
+>
+<img name="" id="" class="" alt="" src="/ossi/web/images/icons/search_icon.png">
+Search Again
+</button></span>
+<script type="text/javascript">
+$('#buttonspan3BB45094CFA14D0492E6409A826861BE').removeAttr("style");
+</script>
+<noscript >
+<label for="solarAction7DA5C7C0-C8DC-4D0F-9A2F987A42C8D5C0">Search Again: </label>
+<input type="button"
+name="solarActionIEMod7DA5C7C0-C8DC-4D0F-9A2F987A42C8D5C0"
+value="default"
+id="solarAction7DA5C7C0-C8DC-4D0F-9A2F987A42C8D5C0"
+onclick="setupButtonSolarAction7DA5C7C0C8DC4D0F9A2F987A42C8D5C0();;submitButtonAction7DA5C7C0C8DC4D0F9A2F987A42C8D5C0();"
+/>
+</noscript>
+&nbsp;&nbsp;
+<input type="hidden" name="hiddensolarActionD5A9CB8E-1028-48E7-8D1C9B17EC4E3519" id="hiddensolarActionD5A9CB8E-1028-48E7-8D1C9B17EC4E3519" value="runsearch">
+<script type="text/javascript">
+function setupButtonSolarActionD5A9CB8E102848E78D1C9B17EC4E3519() {
+// rename any "solarAction" buttons, since IE will use all, even those that arn't clicked
+var solarActionButtons = document.getElementsByName('solarAction');
+for (var i=0;i<solarActionButtons.length;i++)
+{
+solarActionButtons[i].name = 'solarActionD5A9CB8E-1028-48E7-8D1C9B17EC4E3519' + i;
+solarActionButtons[i].id = 'solarActionD5A9CB8E-1028-48E7-8D1C9B17EC4E3519' + i;
+}
+// set up the hidden input name
+var solarActionElement = document.getElementById('hiddensolarActionD5A9CB8E-1028-48E7-8D1C9B17EC4E3519');
+solarActionElement.name = 'solarAction';
+}
+function submitButtonActionD5A9CB8E102848E78D1C9B17EC4E3519() {
+var solarButtonElement = document.getElementById('hiddensolarActionD5A9CB8E-1028-48E7-8D1C9B17EC4E3519');
+solarButtonElement.form.submit();
+}
+</script>
+<span id="buttonspan00AED91C0E29473892BF78F829949257" >
+<button type="button" name="solarActionIEModD5A9CB8E-1028-48E7-8D1C9B17EC4E3519"
+value="runsearch" id="solarActionD5A9CB8E-1028-48E7-8D1C9B17EC4E3519"
+onclick="setupButtonSolarActionD5A9CB8E102848E78D1C9B17EC4E3519();;submitButtonActionD5A9CB8E102848E78D1C9B17EC4E3519();"
+>
+<img name="" id="" class="" alt="" src="/ossi/web/images/icons/search_icon.png">
+Return To Search Results
+</button></span>
+<script type="text/javascript">
+$('#buttonspan00AED91C0E29473892BF78F829949257').removeAttr("style");
+</script>
+<noscript >
+<label for="solarActionD5A9CB8E-1028-48E7-8D1C9B17EC4E3519">Return To Search Results: </label>
+<input type="button"
+name="solarActionIEModD5A9CB8E-1028-48E7-8D1C9B17EC4E3519"
+value="runsearch"
+id="solarActionD5A9CB8E-1028-48E7-8D1C9B17EC4E3519"
+onclick="setupButtonSolarActionD5A9CB8E102848E78D1C9B17EC4E3519();;submitButtonActionD5A9CB8E102848E78D1C9B17EC4E3519();"
+/>
+</noscript>
+</div>
 </fieldset>
+</form>
 </div><!-- close div -->
 </div><!-- close content border div -->
 <div id="footer" style="font-size:11px">
@@ -390,7 +1075,7 @@ onclick="history.back();"
 </div>
 <!--Dialog box contents-->
 <script type="text/javascript">
-document.title = 'OSSI - Search Opportunities';
+document.title = 'OSSI - View Opportunity';
 </script>
 <script type='text/javascript' src='https://mobile.neacc.nasa.gov/pulse/track.js'></script>
 <script type='text/javascript'>try { Pulse.track('OSSI')}catch(e){}</script>

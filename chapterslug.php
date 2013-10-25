@@ -8,7 +8,7 @@ function seds_chapters( $atts ){
 	include_once(ABSPATH  . 'wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php');
 	include_once(ABSPATH  . 'wp-content/plugins/civicrm/civicrm/civicrm.config.php');
 	$config = CRM_Core_Config::singleton();
-	$seds_membershiptype = 1; //Membership type used by seds
+	$seds_membershiptype = 54; //Membership type used by seds
 //Call Membership list
 	$seds_params = array('version' => 3,'page' => 'CiviCRM','q' => 'civicrm/ajax/rest','sequential' => 1,
 		'membership_type_id' => $seds_membershiptype,);
