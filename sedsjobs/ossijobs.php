@@ -240,7 +240,7 @@ if(count($fields[$i]) > 1) { //Fields Exhist
 		//Date Check
 			$fielddate = $fields[$i]['periodstartdisplaydate'];
 			if (preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$fielddate)) {
-				echo "valid date<br>";
+				//echo "valid date<br>";
 			}else{
 				$fielddate = date("Y-m-d");
 			 }
