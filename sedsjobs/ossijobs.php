@@ -237,22 +237,41 @@ if(count($fields[$i]) > 1) { //Fields Exhist
     	);
     	wp_update_post( $postupdate );
 	} else { //New post
+		//Date Check
+			$fielddate = $fields[$i]['periodstartdisplaydate'];
+			if (preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$fielddate)) {
+				echo "valid date<br>";
+			}else{
+				$fielddate = date("Y-m-d");
+			 }
 		$post = array(
 			'comment_status' => 'closed', // 'closed' means no comments.
 			'ping_status'    => 'closed',// 'closed' means pingbacks or trackbacks turned off
 			'post_author'    => 2, //The user ID number of the author.
-			'post_date'      => $fields[$i]['periodstartdisplaydate'] . " 00:00:00", //The time post was made.
+			'post_date'      => $fielddate . " 00:00:00", //The time post was made.
 			'post_name'      => strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $fields[$i]['title']))), // The name (slug) for your post
-			'post_parent'    => 11722,
+			'post_parent'    => 11208,
 			'post_status'    => 'publish', //Set the status of the new post.
 			'post_title'     => $fields[$i]['title'], //The title of your post.
 			'post_type'      => 'jobman_job', //You may want to insert a regular post, page, link, a menu item or some custom post type
 		);  
-		$postid = wp_insert_post( $post ); 
+		//$postid = wp_insert_post( $post ); 
+		//Diagnostics
+		/*
+		$postid = wp_insert_post( $post,true ); 
+                echo "<pre>";
+                print_r($post);
+                echo "</pre>";
+		echo "<pre>";
+		print_r($postid);
+		echo "</pre>";
+		*/
+
 	}
 //Add NASA Category
 	wp_set_post_terms( $postid, array(55) );
 //Add Meta Terms
+	//echo "PostID: " . $postid;
 	update_post_meta($postid, 'highlighted', 0 );
 	update_post_meta($postid, 'email', "info@seds.org" );
 	update_post_meta($postid, 'iconid', "" );

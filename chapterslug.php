@@ -40,7 +40,7 @@ function seds_chapters( $atts ){
 			//Set foundedline cleanly
 			$seds_titleext = $seds_customvalues[1]['latest'] . "&#10; Founded: ". $seds_customvalues[2]['latest']; //TODO: Make a mormalish file
 		$seds_titleline = '<tr title="' . $seds_titleext . '">';
-		$seds_row[$i] = $seds_titleline . '<td>' . '<a href = "' . $seds_webresultvalues[0]['url'] . '">' . $seds_chaptervalues[0]['display_name'] . "</a><br>" . $seds_customvalues[0]['latest'] . "</td><td>" . $seds_chaptervalues[0]['email'] . "</td></tr>";
+		$seds_row[$i] = $seds_titleline . '<td>' . '<a href = "' . $seds_webresultvalues[0]['url'] . '">' . $seds_chaptervalues[0]['display_name'] . "</a><br>" . $seds_customvalues[0]['latest'] . "</td><td>" . "<div class='chapterlist-email'>" . $seds_chaptervalues[0]['email'] . "</div>" . "</td></tr>";
 		$seds_chaptername[$i] = $seds_chaptervalues[0]['display_name'];
 		} //end if loop
 	}

@@ -28,7 +28,7 @@ function seds_chaptersdiscount( $atts ){
 			$htmlreturn .= '<input type="hidden" name="regularregistration" value="'.$regularregistration.'">';
 			$htmlreturn .= '<input type="hidden" name="chapterregistration" value="'.$chapterregistration.'">';
 			$htmlreturn .= 'Chapter Discount Code: <input type="text" name="discountcode">';
-			$htmlreturn .= '<input type="submit" value="Submit">';
+			$htmlreturn .= '<input type="submit" value="Apply Discount">';
 			$htmlreturn .= '</form>';
 			
 		}
